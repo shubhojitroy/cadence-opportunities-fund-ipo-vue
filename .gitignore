@@ -1,7 +1,5 @@
 .DS_Store
 node_modules
-/assets/scss/_variables.scss
-/assets/scss/app.scss
 /dist
 
 # local env files
