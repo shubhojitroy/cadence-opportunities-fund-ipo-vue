@@ -1,0 +1,27 @@
+//body
+$body-margin: 0 0 7.0rem;
+
+//home
+$home-margin: 1.5rem 0;
+
+//card
+$card-max-width: 75%;
+$card-text-align: 0 auto;
+$card-font-color: #808080;
+$card-header-text-color: #21295d;
+
+//button
+$button-background-color: #d8d8d8;
+$button-border-color: #c5c5c5;
+$button-border-radius: 0;
+$button-box-shadow: 0 0.5rem 1rem 0 rgba(10, 10, 10, 0.2);
+$button-hover-background-color: #142f6d;
+$button-hover-border-color: #cad4ec;
+$button-hover-box-shadow: 0 3rem 3rem -1.25rem rgba(10, 10, 10, 0.1);
+
+//footer
+$footer-padding: 1rem 1.5rem;
+$footer-border-top: .0075em solid rgb(221, 214, 214);
+$footer-position: fixed;
+$footer-position-bottom: 0;
+$footer-width: 100%;
