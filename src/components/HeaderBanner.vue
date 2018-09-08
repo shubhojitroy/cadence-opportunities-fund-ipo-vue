@@ -64,10 +64,6 @@ export default {
 </script>
 
 <style scoped lang="scss">
-.navbar {
-    border-top: .3em solid #eef9fd;
-    box-shadow: 0 0 1px rgba(0,0,0,0.25);
-}
 .logo {
     margin: .5em;
 }
