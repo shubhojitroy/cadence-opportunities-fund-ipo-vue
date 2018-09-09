@@ -12,7 +12,9 @@
                     <!-- navbar items -->
                     <div class="navbar-item">
                         <p class="subtitle is-7">
-                            Offer Information Line
+                            Offer Information Line<br>
+                            Telephone: 1300 737 760<br>
+                            Facsimile: 1300 653 459
                         </p>
                     </div>
                 </div>
@@ -30,9 +32,9 @@
                 <div class="level-right logo">
                     <p class="level-item">
                         <span class="subtitle is-7">
-
-                            Offer Information Line
-
+                            Offer Information Line<br>
+                            Telephone: 1300 737 760<br>
+                            Facsimile: 1300 653 459
                         </span>
                     </p>
                 </div>

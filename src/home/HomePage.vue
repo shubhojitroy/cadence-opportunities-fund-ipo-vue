@@ -3,32 +3,33 @@
         <div class="card">
             <header class="card-header">
                 <p class="card-header-title">
-                    Cadence Opportunities Fund
+                    Please select your country of origin
                 </p>
             </header>
             <div class="card-content">
                 <div class="content">
                     <p>
-                        Prospective investors should consider the Prospectus in deciding whether to acquire shares in CDO under the offer. Prospective investors who want to acquire CDO shares under the offer will need to complete an application from that is in, or that accompanies, the Prospectus.
+                        Due to legal restrictions, access to these webpages is only intended for access by persons within Australia and New Zealand. These webpages do not constitute an offer of securities in any place in which, or to any person to whom, it would not be lawful to make such an offer.
                     </p>
                     <hr>
-                    <div class="level">
-                        <div class="level-left">
-                            <a href="/Media-Release_June-2018-results-Full-Year-Dividend-Final.pdf" class="button is-primary" target="_blank" @click="hrefIsClicked">
-                                DOWNLOAD PROSPECTUS&nbsp;&#x2913;
-                            </a>
-                        </div>
-                        <div class="level-right">
-                            <router-link to="/login" :disabled="disabled" class="button is-primary" >
-                                PROCEED&nbsp;&#x27A4;
-                            </router-link>
-                        </div>
+                    <div class="box">
+                        <form novalidate>
+                            <b-field label="Country of Primary Residence">
+                                <b-input v-model="co" type="text" maxlength="4"
+                                placeholder="Select Country of Primary Residence">
+                                </b-input>
+                            </b-field>
+                            <div class="control">
+                                <router-link to="/prospectus" tag="button" class="button is-primary">
+                                    Submit&nbsp;&#x2714;
+                                </router-link>
+                            </div>
+                        </form>
                     </div>
-
                 </div>
+                <hr>
             </div>
         </div>
-
     </div>
 </template>
 
@@ -39,15 +40,13 @@ export default {
   props: {
     msg: String,
   },
+  components: {
+  },
   data() {
     return {
-      disabled: true,
+      name: '',
+      country: '',
     };
-  },
-  methods: {
-    hrefIsClicked() {
-      this.disabled = false;
-    },
   },
 };
 </script>
