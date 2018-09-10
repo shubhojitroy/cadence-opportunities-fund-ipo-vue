@@ -37,41 +37,41 @@ const _apiResponses = [
   },
 ];
 
-const mapApiToInvestor = (data) => ({
-    entitlementNo: data.EntitlementNo,
-    nameAddress1: data.Address1,
-    nameAddress2: data.Address2,
-    nameAddress3: data.Address3,
-    nameAddress4: data.Address4,
-    nameAddress5: data.Address5,
-    nameAddress6: data.Address6,
-    emailAddress: '',
-    phoneNumber: '',
-    unitPrice: data.UnitPrice,
-    entitlement: data.EntitlementAmount,
-  });
+const mapApiToInvestor = data => ({
+  entitlementNo: data.EntitlementNo,
+  nameAddress1: data.Address1,
+  nameAddress2: data.Address2,
+  nameAddress3: data.Address3,
+  nameAddress4: data.Address4,
+  nameAddress5: data.Address5,
+  nameAddress6: data.Address6,
+  emailAddress: '',
+  phoneNumber: '',
+  unitPrice: data.UnitPrice,
+  entitlement: data.EntitlementAmount,
+});
 
-const mapApiToApplication = (data) => ({
-    applicationUnits: 0,
-    billerCode: data.BPayBillerCode,
-    referenceNo: data.BPayReferenceNumber,
-    emailAddress: '',
-    phoneNumber: '',
-  });
+const mapApiToApplication = data => ({
+  applicationUnits: 0,
+  billerCode: data.BPayBillerCode,
+  referenceNo: data.BPayReferenceNumber,
+  emailAddress: '',
+  phoneNumber: '',
+});
 
-const mapApplyRequest = (application) => ({
-    SessionId: application.sessionId,
-    EntitlementNo: application.entitlementNo,
-    IssuerId: _issuerId,
-    ApplicationAmount: application.applicationUnits,
-    ContactNumber: application.phoneNumber,
-    Email: application.emailAddress,
-  });
+const mapApplyRequest = application => ({
+  SessionId: application.sessionId,
+  EntitlementNo: application.entitlementNo,
+  IssuerId: _issuerId,
+  ApplicationAmount: application.applicationUnits,
+  ContactNumber: application.phoneNumber,
+  Email: application.emailAddress,
+});
 
 export default {
 //  investor: mapApiToInvestor(_apiResponse),
   login(credentials, setSession, setInvestor, setApplication, setError) {
-    let response = _apiResponses.find(r => r.EntitlementNo === credentials.entitlementNo);
+    const response = _apiResponses.find(r => r.EntitlementNo === credentials.entitlementNo);
     if (response && response.Ok) {
       const investor = mapApiToInvestor(response);
       const application = mapApiToApplication(response);
@@ -80,10 +80,9 @@ export default {
       setApplication(application);
       setError('');
       return Promise.resolve(response);
-    } 
-      setError('Invalid Entitlement Number');
-      return Promise.reject('Invalid Entitlement Number');
-    
+    }
+    setError('Invalid Entitlement Number');
+    return Promise.reject('Invalid Entitlement Number');
   },
   save(appDetails, setSession, setApplication, setError) {
     const app = mapApplyRequest(appDetails);

@@ -49,5 +49,10 @@ export default new Router({
       name: 'finish',
       component: () => import(/* webpackChunkName: "confirmation" */ './views/Finish.vue'),
     },
+    {
+      path: '/eligibility-notice',
+      name: 'eligibility-notice',
+      component: () => import(/* webpackChunkName: "confirmation" */ './views/eligibility-notice.vue'),
+    },
   ],
 });
