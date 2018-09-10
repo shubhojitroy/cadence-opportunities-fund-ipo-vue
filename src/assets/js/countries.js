@@ -1,4 +1,4 @@
-const _countries = [
+const countries = [
   { code: 'AUS', name: 'AUSTRALIA' },
   { code: 'NZL', name: 'NEW ZEALAND' },
   { code: 'SGP', name: 'SINGAPORE' },
@@ -253,9 +253,9 @@ const _countries = [
   { code: 'YUG', name: 'YUGOSLAVIA' },
   { code: 'ZAR', name: 'ZAIRE' },
   { code: 'ZMB', name: 'ZAMBIA' },
-  { code: 'ZWE', name: 'ZIMBABWE' }
+  { code: 'ZWE', name: 'ZIMBABWE' },
 ];
 
-export const countries = {
-  items: _countries
+export const _countries = {
+  items: _countries,
 };
